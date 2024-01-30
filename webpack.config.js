@@ -11,8 +11,8 @@ var webpackConfig = {
     contentBase: "./dist",
   },
   output: {
-    filename: "[name].js",
-    path: __dirname,
+    filename: "calendar_chart.js",
+    path: path.join(path.resolve(__dirname), "/dist"),
     library: "[name]",
     libraryTarget: "umd",
   },

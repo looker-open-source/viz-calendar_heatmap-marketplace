@@ -5,6 +5,7 @@
   "main": "",
   "scripts": {
     "build": "webpack --config webpack.config.js",
+    "build:legacy": "env NODE_OPTIONS='--openssl-legacy-provider' webpack",
     "start": "webpack-dev-server --open",
     "watch": "webpack --config webpack.config.js --watch --progress",
     "format": "prettier --ignore-path .gitignore --write '**/*.js'"
