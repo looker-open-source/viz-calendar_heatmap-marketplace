@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/compare/v1.0.0...v1.0.1) (2026-05-22)
+
+
+### Bug Fixes
+
+* update manifest.lkml to point to GCP CDN ([#71](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/issues/71)) ([65bdcae](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/commit/65bdcae65a09af843b58885b60c052c492c9867c))
+
 ## 1.0.0 (2024-08-21)
 
 
