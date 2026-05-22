@@ -2,7 +2,7 @@
   "label": "Calendar Heatmap Visualization",
   "category_label": "Plug-ins",
   "branding": {
-    "image_uri": "https://marketplace-api.looker.com/visualization-screenshots/calendar_icon.png",
+    "image_uri": "https://static-a.cdn.looker.app/marketplace/visualization-screenshots/calendar_icon.png",
     "tagline": "Use the Calendar Heatmap to display a date dimension and measure and find trends over time at the Year, Month, and Week level."
   },
 
