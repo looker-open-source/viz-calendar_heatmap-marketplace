@@ -11,6 +11,7 @@ var webpackConfig = {
     contentBase: "./dist",
   },
   output: {
+    hashFunction: 'xxhash64',
     filename: "bundle.js",
     path: path.join(path.resolve(__dirname), "/dist"),
     library: "[name]",
@@ -24,7 +25,7 @@ var webpackConfig = {
   module: {
     rules: [
       { test: /\.(js|jsx)$/, use: "babel-loader" },
-      { test: /\.css$/, loader: ["to-string-loader", "css-loader"] },
+      { test: /\.css$/, use: ["to-string-loader", "css-loader"] },
     ],
   },
   stats: {},
