@@ -54,9 +54,14 @@ const CalendarHeatmap = (props) => {
     d3.selectAll(".monthLabels").remove();
     d3.selectAll(".legendSVG").remove();
     d3.selectAll(".tooltip").remove();
-    drawCalendar(props);
-    if (props.done) {
-      props.done();
+    try {
+      drawCalendar(props);
+    } catch (error) {
+      console.error("Error drawing calendar heatmap:", error);
+    } finally {
+      if (props.done) {
+        props.done();
+      }
     }
   }, [props]);
   return <CalendarChartWrapper className="vis" />;
