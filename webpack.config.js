@@ -8,7 +8,7 @@ var webpackConfig = {
     calendar_chart: "./src/calendar_visualization/calendar_chart_container.js",
   },
   devServer: {
-    contentBase: "./dist",
+    static: "./dist",
   },
   output: {
     filename: "bundle.js",
@@ -24,7 +24,7 @@ var webpackConfig = {
   module: {
     rules: [
       { test: /\.(js|jsx)$/, use: "babel-loader" },
-      { test: /\.css$/, loader: ["to-string-loader", "css-loader"] },
+      { test: /\.css$/, use: ["to-string-loader", "css-loader"] },
     ],
   },
   stats: {},

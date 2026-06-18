@@ -10,6 +10,7 @@ import "d3-transition";
 import { legendColor, legendHelpers } from "d3-svg-legend";
 import SSF from "ssf";
 import styled from "styled-components";
+import Rainbow from "rainbowvis.js";
 
 const CalendarChartWrapper = styled.div`
   font-family: "Roboto", "Open Sans", "Noto Sans JP", "Noto Sans",
@@ -54,6 +55,9 @@ const CalendarHeatmap = (props) => {
     d3.selectAll(".legendSVG").remove();
     d3.selectAll(".tooltip").remove();
     drawCalendar(props);
+    if (props.done) {
+      props.done();
+    }
   }, [props]);
   return <CalendarChartWrapper className="vis" />;
 };
@@ -85,7 +89,6 @@ const drawCalendar = (props) => {
   let max_date = d3.max(props.data, (d) => d.date);
   let min_date = d3.min(props.data, (d) => d.date);
 
-  var Rainbow = require("rainbowvis.js");
   var rainbow = new Rainbow();
   rainbow.setNumberRange(1, 5);
   rainbow.setSpectrum("#FAFAFA", props.color[0]);
