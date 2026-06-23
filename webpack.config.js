@@ -8,9 +8,12 @@ var webpackConfig = {
     calendar_chart: "./src/calendar_visualization/calendar_chart_container.js",
   },
   devServer: {
-    contentBase: "./dist",
+    static: {
+      directory: "./dist",
+    },
   },
   output: {
+    hashFunction: 'sha256',
     filename: "bundle.js",
     path: path.join(path.resolve(__dirname), "/dist"),
     library: "[name]",
@@ -24,7 +27,7 @@ var webpackConfig = {
   module: {
     rules: [
       { test: /\.(js|jsx)$/, use: "babel-loader" },
-      { test: /\.css$/, loader: ["to-string-loader", "css-loader"] },
+      { test: /\.css$/, use: ["to-string-loader", "css-loader"] },
     ],
   },
   stats: {},
