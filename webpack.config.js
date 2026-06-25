@@ -8,9 +8,12 @@ var webpackConfig = {
     calendar_chart: "./src/calendar_visualization/calendar_chart_container.js",
   },
   devServer: {
-    static: "./dist",
+    static: {
+      directory: "./dist",
+    },
   },
   output: {
+    hashFunction: 'sha256',
     filename: "bundle.js",
     path: path.join(path.resolve(__dirname), "/dist"),
     library: "[name]",
