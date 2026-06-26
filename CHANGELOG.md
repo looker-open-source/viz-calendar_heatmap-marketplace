@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/compare/v1.0.1...v1.0.2) (2026-06-26)
+
+
+### Bug Fixes
+
+* correct done rendering callback for PDF export, code cleanup and upgrade webpack ([#78](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/issues/78)) ([21dd6c5](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/commit/21dd6c533b05ebfbf902d593c5340efb2c49c0e1))
+
 ## [1.0.1](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/compare/v1.0.0...v1.0.1) (2026-05-22)
 
 
