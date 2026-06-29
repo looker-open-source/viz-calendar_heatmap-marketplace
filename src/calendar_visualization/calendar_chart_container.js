@@ -10,10 +10,7 @@ import * as d3 from "d3";
 import moment from "moment";
 import { timeYears } from "d3";
 
-const colorByOps = {
-  SEGMENT: "segment",
-  RANGE: "range",
-};
+
 const baseOptions = {
   color_picker: {
     type: "array",
@@ -160,6 +157,7 @@ looker.plugins.visualizations.add({
         title: "No Measures",
         message: "This chart requires measures.",
       });
+      done();
       return;
     }
     if (queryResponse.fields.measure_like.length > 1) {
@@ -167,6 +165,7 @@ looker.plugins.visualizations.add({
         title: "Wrong input data.",
         message: "This chart requires 1 measure.",
       });
+      done();
       return;
     }
     if (queryResponse.fields.dimension_like.length > 1) {
@@ -174,6 +173,7 @@ looker.plugins.visualizations.add({
         title: "Wrong input data.",
         message: "This chart requires 1 dimension.",
       });
+      done();
       return;
     }
     if (queryResponse.fields.dimension_like.length == 0) {
@@ -181,6 +181,7 @@ looker.plugins.visualizations.add({
         title: "No Dimensions",
         message: "This chart requires dimensions.",
       });
+      done();
       return;
     }
     if (data.length == 0) {
@@ -188,6 +189,7 @@ looker.plugins.visualizations.add({
         title: "No Results",
         message: "",
       });
+      done();
       return;
     }
 
@@ -232,6 +234,7 @@ looker.plugins.visualizations.add({
         message:
           "Calendar Heatmap requires one non-null date dimension and one measure.",
       });
+      done();
       return;
     }
 
@@ -260,9 +263,9 @@ looker.plugins.visualizations.add({
         cell_reducer={config.cell_reducer}
         axis_label_color={config.axis_label_color}
         outline_color={config.outline_color}
+        done={done}
       />,
       element
     );
-    done();
   },
 });
