@@ -1,6 +1,6 @@
 {
   "name": "looker-visualization",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "",
   "scripts": {
@@ -42,7 +42,7 @@
     "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.104.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "5.2.4"
+    "webpack-dev-server": "5.2.5"
   },
   "resolutions": {
     "js-yaml": "4.2.0",
