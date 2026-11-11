@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.4](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/compare/v1.0.2...v3.0.4) (2026-11-10)
+
+
+### Miscellaneous Chores
+
+* sync release version with marketplace listing ([#120](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/issues/120)) ([5746a14](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/commit/5746a14d4710eb916a43bfba56281d473317c762))
+
 ## [1.0.2](https://github.com/looker-open-source/viz-calendar_heatmap-marketplace/compare/v1.0.1...v1.0.2) (2026-06-26)
 
 
